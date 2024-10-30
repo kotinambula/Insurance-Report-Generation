@@ -9,8 +9,8 @@ import com.koti.entity.CitizenPlan;
 
 public interface CitizenPlansRepository extends JpaRepository<CitizenPlan, Integer> {
 
-	@Query("select distinct(planName) from CitizenPlan")
-	public List<CitizenPlan> getPlanNames();
-	@Query("select distinct(planStatus) from CitizenPlan")
-	public List<CitizenPlan> getPlanStatus();
+	@Query("select distinct (planName) from CitizenPlan")
+	public List<String> getPlanNames();
+	@Query("select distinct (planStatus) from CitizenPlan")
+	public List<String> getPlanStatus();
 }
